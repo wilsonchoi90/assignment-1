@@ -13,7 +13,7 @@ html { box-sizing: border-box; }
 /* General styling */
 
 html {
- font-size: 16px;
+    font-size: 16px;
 }
 
 ul {
@@ -30,6 +30,7 @@ h3 {
 
 img {
     max-width: 100%;
+    display: block;
     height: auto;
 }
 
@@ -46,8 +47,6 @@ header {
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: top;
-
 }
 
 header .wrapper {
@@ -78,7 +77,6 @@ nav a {
 .title-animal-refuge {
     display: inline-block;
     margin-top: 15%;
-
 }
 
 h1 {
@@ -95,6 +93,10 @@ h1 {
     display: flex;
     justify-content: right;
     margin: 250px 55px 0 0;
+}
+
+.hamburger-container {
+    display: none;
 }
 
 /* About Section */
@@ -220,11 +222,227 @@ h1 {
 
 .text-container-blog-1 {
     background: #fcfcfc;
-    width: 700px;
+    width: 50%;
     height: auto;
+    text-align: left;
+    padding: 100px 150px;
+}
+
+.text-container-blog-1 h3 {
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    color: #152D20;
+}
+
+.text-container-blog-1 p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    line-height: 29px;
+    color: #000;
+}
+
+.text-container-blog-1 button {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.125rem;
+    line-height: 29px;
+    text-align: center;
+    background: #152D20;
+    text-transform: uppercase;
+    color: #fcfcfc;
+    margin-top: 45px;
+    padding: 25px 50px;
+    border: 1px #152D20;
 }
 
 .image-container-blog-1 {
-    width: 700px;
+    width: 50%;
     height: auto;
+}
+
+.image-container-blog-2 {
+    width: 50%;
+    height: auto;
+}
+
+.text-container-blog-2 {
+    background: #fcfcfc;
+    width: 50%;
+    height: auto;
+    text-align: left;
+    padding: 100px 150px;
+}
+
+.text-container-blog-2 h3 {
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    color: #152D20;
+}
+
+.text-container-blog-2 p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    line-height: 29px;
+    color: #000;
+}
+
+.text-container-blog-2 button {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.125rem;
+    line-height: 29px;
+    text-align: center;
+    background: #152D20;
+    text-transform: uppercase;
+    color: #fcfcfc;
+    margin-top: 45px;
+    padding: 25px 50px;
+    border: 1px #152D20;
+}
+
+/* Footer section */
+
+.contact {
+    background:#152D20;
+    padding: 100px 0px;
+}
+footer .wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-container ul {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+.footer-nav a {
+color: #fcfcfc;
+font-family: 'Cormorant Garamond', serif;
+font-size: 2.188rem;
+text-decoration: none;
+text-transform: uppercase;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-container h3 {
+    color: #fcfcfc;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.188rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.form-container p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.25rem;
+    color: #fcfcfc;
+}
+
+.form-container button {
+    color: #fcfcfc;
+    background: #000;
+    border: 1px #000;
+    text-transform: uppercase;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.125rem;
+    line-height: 29px;
+    text-align: center;
+}
+
+.contact-info {
+    text-align: right;
+    text-transform: uppercase;
+    color: #fcfcfc;
+}
+
+.contact-info h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.188rem;
+}
+
+.contact-info p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.25rem;
+    line-height: 29px;
+}
+
+.copyright {
+    display: flex;
+    background: #000;
+}
+
+.copyright .wrapper {
+    justify-content: center;
+}
+.copyright p {
+    justify-content: space-around;
+    color: #fcfcfc;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.25rem;
+    line-height: 29px;
+    margin: 0px;
+}
+
+/* Media Queries */
+
+/* Header section */
+
+@media (max-width: 650px) {
+
+    header {
+        height: 100vh;
+        background-position: center;
+    }
+
+    .header-nav {
+        display: none;
+    }
+
+    .icon-container {
+        display: none;
+    }
+
+    header .wrapper {
+        display: inline-block;
+        flex-direction: row;
+    }
+
+    .title-animal-refuge {
+        margin-top: 0px;
+    }
+
+    .title-animal-refuge h1 {
+        font-size: 4.5rem;
+        line-height: 70px;
+        text-align: left;
+    }
+
+    .hamburger-container {
+        display: flex;
+    }
+
+}
+
+/* About section */
+
+@media (max-width: 650px) {
+    .about .wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* Blog section */
+
+@media (max-width: 650px) {
+
 }
